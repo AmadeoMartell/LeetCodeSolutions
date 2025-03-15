@@ -1,4 +1,4 @@
-package taks_3146;
+package task_3146;
 
 class Solution {
     public static void main(String[] args) {
