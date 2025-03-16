@@ -5,7 +5,7 @@ import java.util.*;
 class Solution {
     public List<List<Integer>> threeSum(int[] nums) {
         Arrays.sort(nums);
-        List<List<Integer>> res = new ArrayList<>();
+        Set<List<Integer>> res = new HashSet<>();
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] > 0) break;
             int target = -nums[i];
@@ -21,7 +21,7 @@ class Solution {
             }
         }
 
-        return res;
+        return new ArrayList<>(res);
     }
 
     public static List<Integer[]> twoSum(int[] nums, int target, int ignoreInd) {
@@ -44,7 +44,7 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        Solution_TIME_EXCEED solution = new Solution_TIME_EXCEED();
+        Solution solution = new Solution();
         System.out.println(solution.threeSum(new int[]{-1,0,1,2,-1,-4,-2,-3,3,0,4}));
     }
 }
